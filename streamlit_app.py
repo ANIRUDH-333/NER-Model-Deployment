@@ -1,6 +1,10 @@
 import streamlit as st
 import requests
 from requests.auth import HTTPBasicAuth
+from dotenv import load_dotenv 
+import os
+
+load_dotenv()
 
 # Streamlit UI
 st.title("NER Entity Recognition")
@@ -15,7 +19,7 @@ if st.button("Analyze"):
         api_url = "http://127.0.0.1:8000/predict"  # Update if deployed
 
         # Authentication
-        auth = HTTPBasicAuth("admin", "password123")
+        auth = HTTPBasicAuth(os.getenv("USERNAME"), os.getenv("PASSWORD"))
 
         # Send request
         response = requests.post(api_url, json={"text": text_input}, auth=auth)
