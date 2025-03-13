@@ -4,6 +4,13 @@
 
 This project implements a Named Entity Recognition (NER) service using a fine-tuned BERT model. It exposes a REST API built with Flask that processes text inputs and returns recognized entities with their labels and scores. A complementary Streamlit web application serves as a user-friendly interface to interact with the API. Additionally, a Dockerfile is provided for containerization, making deployment straightforward.
 
+## Demo Video
+
+<video width="600" controls>
+  <source src="demo/demo.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Repository Structure
 
 ```
