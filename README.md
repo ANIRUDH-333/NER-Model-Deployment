@@ -64,7 +64,7 @@ ner-project/
    ```txt
    Flask
    transformers
-   torch  # or tensorflow if using that backend
+   torch
    streamlit
    requests
    ```
@@ -127,6 +127,18 @@ ner-project/
 
 ## Model and Authentication Details
 
-- **Model Loading:** The API loads a BERT model from the directory specified by `model_path` in `app.py` (e.g., `"bert_ner_model"`). Ensure your trained model and tokenizer are correctly saved in this path.
+- **Model Loading:** The API loads a BERT model from the directory specified by `model_path` in `app.py` (e.g., `"model"`). Ensure your trained model and tokenizer are correctly saved in this path. But now, it takes from the hugging face space as the model is hosted there
 - **Entity Mapping:** The model uses a BIO tagging scheme. The mapping is defined in the `BIO_LABELS` dictionary to convert model labels to human-readable entity names.
 - **Authentication:** Basic authentication is required for the `/predict` endpoint to prevent unauthorized access.
+
+## Hosting related information
+
+### Streamlit UI
+https://anirudh-ner-model.streamlit.app/
+
+### Backend
+https://ner-model-deployment.onrender.com
+
+> <span style="color:orange;">&#9888; Due to the model size of approximately 400 MB, the backend server experiences Out Of Memory (OOM) issues on the free tier, which only provides 512 MB of memory. However, you can still run the application locally by following the steps outlined above.</span>
+
+><span style="color:orange;">&#9888; The .env file is included intentionally to demonstrate best practices.</span>
