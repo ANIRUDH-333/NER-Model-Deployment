@@ -16,7 +16,7 @@ text_input = st.text_area("Enter text for NER")
 if st.button("Analyze"):
     if text_input:
         # Define API endpoint
-        api_url = "http://127.0.0.1:8000/predict"  # Update if deployed
+        api_url = "https://ner-model-deployment.onrender.com/predict"  # Update if deployed
 
         # Authentication
         auth = HTTPBasicAuth(os.getenv("USERNAME"), os.getenv("PASSWORD"))
