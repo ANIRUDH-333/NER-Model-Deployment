@@ -131,13 +131,21 @@ ner-project/
 - **Entity Mapping:** The model uses a BIO tagging scheme. The mapping is defined in the `BIO_LABELS` dictionary to convert model labels to human-readable entity names.
 - **Authentication:** Basic authentication is required for the `/predict` endpoint to prevent unauthorized access.
 
+## Model Files
+Due to the large size of the model files, they have been hosted on Hugging Face. You can access them at: [anirudh333/ner-model](https://huggingface.co/anirudh333/ner-model).
+
 ## Hosting related information
 
 ### Streamlit UI
 https://anirudh-ner-model.streamlit.app/
 
 ### Backend
+
+#### Deployed on render
 https://ner-model-deployment.onrender.com
+
+#### Deplyed on Railway.app
+https://ner-model-deployment-production.up.railway.app/
 
 > <span style="color:orange;">&#9888; Due to the model size of approximately 400 MB, the backend server experiences Out Of Memory (OOM) issues on the free tier, which only provides 512 MB of memory. However, you can still run the application locally by following the steps outlined above.</span>
 
